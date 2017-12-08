@@ -1,0 +1,29 @@
+﻿@model IEnumerable<JunsWebApp.Models.ViewItem>
+
+@{
+    ViewBag.Title = "ViewItem List";
+}
+
+<h2>Existing ViewList:</h2>
+total count is : @Model.Count()
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Location)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Rating)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model)
+{
+    Html.RenderPartial("_Review",item);
+}
+
+</table>

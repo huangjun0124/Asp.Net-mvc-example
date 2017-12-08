@@ -1,0 +1,38 @@
+﻿@model IEnumerable<JunsWebApp.Models.Class>
+<form method="get">
+    <input type="search" name ="searchStu"/>
+    <input type ="submit" value="Search Class By Student Name"/>
+</form>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>Sex</th>
+        <th>Age</th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)：@Html.DisplayFor(k=>item.TeacherName)
+        </td>
+    </tr>
+    foreach (var stu in item.Students)
+    {
+        <tr>
+            <td>
+                &nbsp;&nbsp;&nbsp;@Html.DisplayFor(modelItem => stu.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => stu.Sex)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => stu.Age)
+            </td>
+        </tr> 
+    }
+}
+
+</table>

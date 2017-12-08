@@ -1,0 +1,15 @@
+﻿@model JunsWebApp.Models.ViewItem
+<tr>
+    <td>
+        @Html.DisplayFor(model=>model.Name)
+    </td>
+    <td>
+        @Html.DisplayFor(model => model.Location)
+    </td>
+    <td>
+        @Html.DisplayFor(model => model.Rating)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id= Model.Id })
+    </td>
+</tr>

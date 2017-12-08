@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Jun's App with ASP.NET</h1>
+    <p class="lead">ASP .Net MVC Learning Example</p>
+</div>
+<h1>Route is :@ViewBag.Message</h1>
+<div class="row">
+    <div class="col-md-4">
+        <h2>Score Controller</h2>
+        <p>Provides a Search method, return file/content/json etc. depends on route param; </p>
+        <p>This route is specially configured in RouteConfig</p>
+        <p><a class="btn btn-default" href="/Score/json">Click for example &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Class Controller</h2>
+        <p>Define Class and Student using EF Code first.</p>
+        <p>list Classes and edit Students under specific Class</p>
+        <p>This module is composed of StudentsController</p>
+        <p><a class="btn btn-default" href="/Classes">Click to see</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Review Controller</h2>
+        <p>Datasource is a in-memory list</p>
+        <p>PartialView is shown in this example</p>
+        <p><a class="btn btn-default" href="/Review">Click to check</a></p>
+    </div>
+</div>

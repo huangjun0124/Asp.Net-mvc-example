@@ -1,0 +1,15 @@
+﻿@model JunsWebApp.Models.Class
+
+@{
+    ViewBag.Title = "Student List";
+}
+
+<h2>Students in Class @Model.Name</h2>
+
+<p>
+    @Html.ActionLink("Create New Student", "Create",new {classId = Model.Id})
+</p>
+
+@Html.Partial("_StudentList",@Model.Students)
+
+
